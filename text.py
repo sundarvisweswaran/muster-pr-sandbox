@@ -3,5 +3,6 @@ def slug(s: str) -> str:
     return "-".join(s.lower().split())
 
 
-def title_case(s):
-    return " ".join(w[0].upper() + w[1:] for w in s.split(" "))
+def title_case(s: str) -> str:
+    """Capitalize the first letter of each space-separated word, preserving spacing."""
+    return " ".join(w[:1].upper() + w[1:] for w in s.split(" "))
