@@ -8,5 +8,6 @@ def title_case(s: str) -> str:
     return " ".join(w[:1].upper() + w[1:] for w in s.split(" "))
 
 
-def snake_case(s):
-    return "_".join(s.lower().split(" "))
+def snake_case(s: str) -> str:
+    """Lowercase whitespace-separated words joined by '_'."""
+    return "_".join(s.lower().split())
