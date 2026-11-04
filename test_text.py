@@ -1,5 +1,5 @@
 import unittest
-from text import slug, title_case
+from text import slug, snake_case, title_case
 
 
 class SlugTest(unittest.TestCase):
@@ -9,6 +9,10 @@ class SlugTest(unittest.TestCase):
     def test_title_case(self):
         self.assertEqual(title_case("hello world"), "Hello World")
         self.assertEqual(title_case("hello  world"), "Hello  World")
+
+    def test_snake_case(self):
+        self.assertEqual(snake_case("Hello World"), "hello_world")
+        self.assertEqual(snake_case("  Hello   World "), "hello_world")
 
 
 if __name__ == "__main__":
